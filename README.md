@@ -20,28 +20,37 @@ The project is built around a "fail-safe" extraction logic. Since third-party AP
 
 1. **Clone the repo:**
    ```bash
-   git clone [https://github.com/AthulJkmr/aus-ev-market-pipeline.git](https://github.com/AthulJkmr/aus-ev-market-pipeline.git)
+   git clone https://github.com/AthulJkmr/aus-ev-market-pipeline.git
    cd aus-ev-market-pipeline
+   ```
 
 2. **Set up the environment:**
-    python -m venv venv
-    source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-    pip install -r requirements.txt
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: .\\venv\\Scripts\\activate
+   pip install -r requirements.txt
+   ```
 
 3. **Add your API Key:**
-    Create a .env file in the root directory:
-    API_NINJAS_KEY=your_actual_key
+   Create a `.env` file in the root directory:
+   ```text
+   API_NINJAS_KEY=your_actual_key_here
+   ```
 
 4. **Run the pipeline:**
-    python src/extract_data.py
-    python src/transform_data.py
-    python src/load_data.py
+   ```bash
+   python src/extract_data.py
+   python src/transform_data.py
+   python src/load_data.py
+   ```
 
 5. **Launch the app:**
-    streamlit run app.py
+   ```bash
+   streamlit run app.py
+   ```
 
-6. **Tech Used:**
-    - Python (Requests, Pandas, SQLite3)
-    - Streamlit
-    - Plotly Express
-    - Python-dotenv
+## Tech Used
+* Python (Requests, Pandas, SQLite3)
+* Streamlit
+* Plotly Express
+* Python-dotenv
