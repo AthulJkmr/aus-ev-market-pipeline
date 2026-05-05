@@ -1,8 +1,7 @@
-Manufacturer,Model
-Tesla,Model S
-Tesla,Roadster
-Tesla,Model X
-Tesla,Model 3
-Tesla,Model Y
-Tesla,Semi
-Tesla,Cybertruck
+Manufacturer,Model,Vehicle_Class,Drivetrain,Transmission,Cylinders,Engine_Liters,Model_Year,City_MPGe,Highway_MPGe,Combined_MPGe
+Hyundai,Ioniq 5 Awd (Long Range),Large Car,awd,A,,,2022,this field is for premium subscribers only,this field is for premium subscribers only,this field is for premium subscribers only
+Hyundai,Kona Fwd,Small Sport Utility Vehicle,fwd,A,4.0,1.6,2018,this field is for premium subscribers only,this field is for premium subscribers only,this field is for premium subscribers only
+Kia,Ev6 Awd (Long Range),Small Station Wagon,awd,A,,,2022,this field is for premium subscribers only,this field is for premium subscribers only,this field is for premium subscribers only
+Kia,Niro,Small Station Wagon,fwd,A,4.0,1.6,2017,this field is for premium subscribers only,this field is for premium subscribers only,this field is for premium subscribers only
+Tesla,Model 3 Long Range,Midsize Car,rwd,A,,,2017,this field is for premium subscribers only,this field is for premium subscribers only,this field is for premium subscribers only
+Tesla,Model Y Performance Awd,Small Sport Utility Vehicle,awd,A,,,2020,this field is for premium subscribers only,this field is for premium subscribers only,this field is for premium subscribers only

@@ -1,49 +1,81 @@
 {
-    "Count": 7,
-    "Message": "Response returned successfully",
-    "SearchCriteria": "Make:tesla",
-    "Results": [
+    "source": "api_ninjas",
+    "data": [
         {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 1685,
-            "Model_Name": "Model S"
+            "city_mpg": "this field is for premium subscribers only",
+            "class": "midsize car",
+            "combination_mpg": "this field is for premium subscribers only",
+            "drive": "rwd",
+            "fuel_type": "electricity",
+            "highway_mpg": "this field is for premium subscribers only",
+            "make": "tesla",
+            "model": "model 3 long range",
+            "transmission": "a",
+            "year": 2017
         },
         {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 2071,
-            "Model_Name": "Roadster"
+            "city_mpg": "this field is for premium subscribers only",
+            "class": "small sport utility vehicle",
+            "combination_mpg": "this field is for premium subscribers only",
+            "drive": "awd",
+            "fuel_type": "electricity",
+            "highway_mpg": "this field is for premium subscribers only",
+            "make": "tesla",
+            "model": "model y performance awd",
+            "transmission": "a",
+            "year": 2020
         },
         {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 10199,
-            "Model_Name": "Model X"
+            "city_mpg": "this field is for premium subscribers only",
+            "class": "large car",
+            "combination_mpg": "this field is for premium subscribers only",
+            "drive": "awd",
+            "fuel_type": "electricity",
+            "highway_mpg": "this field is for premium subscribers only",
+            "make": "hyundai",
+            "model": "ioniq 5 awd (long range)",
+            "transmission": "a",
+            "year": 2022
         },
         {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 17834,
-            "Model_Name": "Model 3"
+            "city_mpg": "this field is for premium subscribers only",
+            "class": "small sport utility vehicle",
+            "combination_mpg": "this field is for premium subscribers only",
+            "cylinders": 4,
+            "displacement": 1.6,
+            "drive": "fwd",
+            "fuel_type": "gas",
+            "highway_mpg": "this field is for premium subscribers only",
+            "make": "hyundai",
+            "model": "kona fwd",
+            "transmission": "a",
+            "year": 2018
         },
         {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 27027,
-            "Model_Name": "Model Y"
+            "city_mpg": "this field is for premium subscribers only",
+            "class": "small station wagon",
+            "combination_mpg": "this field is for premium subscribers only",
+            "drive": "awd",
+            "fuel_type": "electricity",
+            "highway_mpg": "this field is for premium subscribers only",
+            "make": "kia",
+            "model": "ev6 awd (long range)",
+            "transmission": "a",
+            "year": 2022
         },
         {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 30834,
-            "Model_Name": "Semi"
-        },
-        {
-            "Make_ID": 441,
-            "Make_Name": "Tesla",
-            "Model_ID": 33135,
-            "Model_Name": "Cybertruck"
+            "city_mpg": "this field is for premium subscribers only",
+            "class": "small station wagon",
+            "combination_mpg": "this field is for premium subscribers only",
+            "cylinders": 4,
+            "displacement": 1.6,
+            "drive": "fwd",
+            "fuel_type": "gas",
+            "highway_mpg": "this field is for premium subscribers only",
+            "make": "kia",
+            "model": "niro",
+            "transmission": "a",
+            "year": 2017
         }
     ]
 }
