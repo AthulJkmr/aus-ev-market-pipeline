@@ -1,25 +1,47 @@
 # Australian EV Market Data Pipeline
 
-I built this project to get a better handle on the electric vehicle market in Australia. It’s an end-to-end ETL (Extract, Transform, Load) pipeline that pulls data from external APIs, cleans it up, and displays it in an interactive dashboard.
+This is a personal project I put together to track electric vehicle availability and specs in the Australian market. It's an end-to-end ETL pipeline that pulls live data from APIs, cleans it up, and serves it through an interactive dashboard.
 
-## The Goal
-The idea was to create a resilient system that could handle real-world API issues. If the primary data source (API Ninjas) fails or hits a rate limit, the script automatically switches over to a public NHTSA backup so the dashboard stays updated.
+## How it Works
+The project is built around a "fail-safe" extraction logic. Since third-party APIs can be unreliable or hit rate limits, I built a fallback mechanism:
+
+1. **Extraction:** The script first tries to get deep specifications (drivetrain, efficiency, etc.) from API Ninjas. If that fails or returns an error, it automatically switches to the public NHTSA database to pull the latest models so the pipeline never breaks.
+2. **Transformation:** Using Pandas, the raw JSON data is cleaned, column names are standardized, and data types are corrected.
+3. **Storage:** The final cleaned dataset is loaded into a local SQLite database (`ev_market.db`).
+4. **Dashboard:** A Streamlit app reads from the database to show market distribution, drivetrain splits, and efficiency comparisons using Plotly.
 
 ## Project Structure
+* `extract_data.py`: Handles the multi-source API logic and saves raw JSON.
+* `transform_data.py`: Cleans the raw data and prepares it for the database.
+* `load_data.py`: Ingests the cleaned CSV into SQLite.
+* `app.py`: The dashboard interface.
 
-* **Extraction:** Hits the API Ninjas Cars endpoint for deep specs. If it gets a 400 error, it triggers a fallback sequence to pull model names from the NHTSA database.
-* **Transformation:** Uses Pandas to normalize different API schemas, clean up string formatting (capitalization, etc.), and handle missing values.
-* **Loading:** Ingests the final dataset into a local SQLite database (`ev_market.db`) for easy querying.
-* **Dashboard:** A Streamlit app that lets you filter by manufacturer and drivetrain to see market distribution and efficiency stats via Plotly.
+## Local Setup
 
-## Getting Started
+1. **Clone the repo:**
+   ```bash
+   git clone [https://github.com/AthulJkmr/aus-ev-market-pipeline.git](https://github.com/AthulJkmr/aus-ev-market-pipeline.git)
+   cd aus-ev-market-pipeline
 
-### 1. Setup
-Clone the repo and set up a fresh virtual environment:
+2. **Set up the environment:**
+    python -m venv venv
+    source venv/bin/activate  # On Windows: .\venv\Scripts\activate
+    pip install -r requirements.txt
 
-```bash
-git clone [https://github.com/AthulJkmr/aus-ev-market-pipeline.git](https://github.com/AthulJkmr/aus-ev-market-pipeline.git)
-cd aus-ev-market-pipeline
-python -m venv venv
-source venv/bin/activate  # On Windows: .\venv\Scripts\activate
-pip install -r requirements.txt
+3. **Add your API Key:**
+    Create a .env file in the root directory:
+    API_NINJAS_KEY=your_actual_key
+
+4. **Run the pipeline:**
+    python src/extract_data.py
+    python src/transform_data.py
+    python src/load_data.py
+
+5. **Launch the app:**
+    streamlit run app.py
+
+6. **Tech Used:**
+    - Python (Requests, Pandas, SQLite3)
+    - Streamlit
+    - Plotly Express
+    - Python-dotenv
